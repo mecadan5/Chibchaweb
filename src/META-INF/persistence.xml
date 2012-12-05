@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="gente" transaction-type="RESOURCE_LOCAL">
+		<class>modelo2.xUsuariox</class>
+		<class>modelo2.xTransaccionx</class>
+		<class>modelo2.xPoligamox</class>
+		<class>modelo2.xDatosContactox</class>
+		<class>modelo2.xEsposax</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="123456" />
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"	value="database" />
+			<property name="eclipselink.jdbc.batch-writing" value="Buffered" />
+		</properties>
+	</persistence-unit>
+</persistence>
+
